@@ -1,0 +1,13 @@
+{{#each todo}}
+    <div class="card card-body mb-2"> <!-- mb-2 is a bootstrap class for margin\bottom of 2 -->
+        <h4>{{title}}</h4>
+        <p>{{details}}</p>
+        <a class="btn btn-dark btn-block mb-2" href="/todo/edit/{{id}}">Edit</a>
+        <form method="post" action="/todo/{{id}}?_method=DELETE">
+        <input type="hidden" name="_method" value="DELETE">
+        <input type="submit" class="btn btn-danger btn-block" value="DELETE">
+        </form>
+    </div>
+{{else}}
+    <p>No to-do's listed</p>
+{{/each}}

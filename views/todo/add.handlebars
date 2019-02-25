@@ -1,0 +1,22 @@
+<!-- This is a loop in handlebars -->
+{{#each errors}}
+    <div class="alert alert-danger">{{text}}</div>
+{{else}}
+
+{{/each}}
+
+<div class="card card-body">
+    <h3>To-do Items</h3>
+    <form action="/todo" method="post">
+        <div class="form-group">
+            <label for="title">Item</label>
+            <!-- Use required for client-side validation -->
+            <input type="text" class="form-control" name="title" required> 
+        </div>
+         <div class="form-group">
+            <label for="title">details:</label>
+            <textarea class="form-control" name="details" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
